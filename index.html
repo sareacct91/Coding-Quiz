@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/CSS/reset.css">
+  <link rel="stylesheet" href="./assets/CSS/style.css">
+  <title>Coding Quiz</title>
+</head>
+<body>
+  <header class="row just-between align-center">
+    <button>View high scores</button>
+    <p id="timer" class="">Time: 0</p>
+  </header>
+
+  <main>
+    <h1>Coding Quiz Challenge</h1>
+
+    <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+
+    <button id="startBtn" class="button ">Start Quiz</button>
+    <ul class="answer-list column just-even">
+      <li id="answer1" class="button"></li>
+      <li id="answer2" class="button"></li>
+      <li id="answer3" class="button"></li>
+      <li id="answer4" class="button"></li>
+    </ul>
+  </main>
+
+  <footer>
+    <h2 id="answerCheck"></h2>
+  </footer>
+
+  <script src="./assets/Scripts/script.js"></script>
+</body>
+</html>
