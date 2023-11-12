@@ -7,28 +7,38 @@
   <link rel="stylesheet" href="./assets/CSS/style.css">
   <title>Coding Quiz</title>
 </head>
-<body>
+
+<body class="column">
   <header class="row just-between align-center">
     <button>View high scores</button>
-    <p id="timer" class="">Time: 0</p>
+    <p id="timeDisplay" class="">Time: 0</p>
   </header>
 
-  <main>
-    <h1>Coding Quiz Challenge</h1>
+  <main class="column align-center text-center">
+    
+    <div id="startingCard" class="column align-center ">
+      <h1>Coding Quiz Challenge</h1>
 
-    <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+      <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
 
-    <button id="startBtn" class="button ">Start Quiz</button>
-    <ul class="answer-list column just-even">
-      <li id="answer1" class="button"></li>
-      <li id="answer2" class="button"></li>
-      <li id="answer3" class="button"></li>
-      <li id="answer4" class="button"></li>
-    </ul>
+      <button id="startBtn" class="button ">Start Quiz</button>
+    </div>
+    
+    <div id="questionCard" class="column align-start isNotDisplay">
+      <h2 id="questionDisplay" class="text-left">Commonly used data types DO Not Include:</h2>
+
+      <ul class="answer-list column just-even">
+        <button id="answerBtn1" class="button row align-center">1. </button>
+        <button id="answerBtn2" class="button row align-center">2. </button>
+        <button id="answerBtn3" class="button row align-center">3. </button>
+        <button id="answerBtn4" class="button row align-center">4. </button>
+      </ul>
+    </div>
+    
   </main>
 
   <footer>
-    <h2 id="answerCheck"></h2>
+    
   </footer>
 
   <script src="./assets/Scripts/script.js"></script>
