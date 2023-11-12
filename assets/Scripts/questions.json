@@ -1,0 +1,34 @@
+[
+  {
+    "question": "Commonly used data types DO Not Include:",
+    "ans1": "strings",
+    "ans2": "booleans",
+    "ans3": "alerts",
+    "ans4": "numbers",
+    "correct": "ans3"
+  },
+  {
+    "question": "The condition in an if / else statement is enclosed with _____________.",
+    "ans1": "quotes",
+    "ans2": "curly brackets",
+    "ans3": "parenthesis",
+    "ans4": "square brackets",
+    "correct": "ans3"
+  },
+  {
+    "question": "Arrays in JavaScript can be used to store _____________.",
+    "ans1": "numbers and strings",
+    "ans2": "other arrays",
+    "ans3": "booleans",
+    "ans4": "all of the above",
+    "correct": "ans4"
+  },
+  {
+    "question": "String values must be enclosed within ________ when being assigned to variables.",
+    "ans1": "commas",
+    "ans2": "curly brackets",
+    "ans3": "quotes",
+    "ans4": "parenthesis",
+    "correct": "ans3"
+  }
+]
