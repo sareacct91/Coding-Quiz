@@ -10,7 +10,7 @@
 
 <body class="column">
   <header class="row just-between align-center">
-    <button>View high scores</button>
+    <button id="highScoreBtn">View high scores</button>
     <p id="timeDisplay" class="">Time: 0</p>
   </header>
 
@@ -35,21 +35,24 @@
       </ul>
     </div>
 
-    <div id="resultCard" class="column align-start ">
+    <div id="resultCard" class="column align-start isNotDisplay">
       <h2>All done!</h2>
-      <p>Your final score is "".</p>
-      <form>
+      <p id="finalScore">Your final score is "".</p>
+      <div>
         <label for="initialTxt">Enter initials: </label>
         <input type="text" name="initialTxt" id="initialTxt">
         <button id="submitBtn" class="button">Submit</button>
-      </form>
+      </div>
     </div>
 
-    <div id="highScores" class="column align-start ">
+    <div id="highScoresCard" class="column align-start isNotDisplay">
       <h2>High scores</h2>
-      <ol>
-        <li></li>
-      </ol>
+      <ul id="highScoreDisplay" class="text-left"></ul>
+      <div>
+        <button id="restartBtn" class="button">Go back</button>
+        <button id="clearBtn" class="button">Clear high scores</button>
+      </div>
+      
     </div>
 
     <footer class="column align-start isNotDisplay"></footer>
