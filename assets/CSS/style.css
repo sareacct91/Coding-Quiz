@@ -107,6 +107,13 @@ h1, h2 {
   font-size: 20px;
 }
 
+#highScoreDisplay {
+  background-color: rgb(205, 183, 241);
+  padding-left: 2%;
+  width: 100%;
+}
+
+
 footer {
   border-top: 2px solid;
   width: 70%;
