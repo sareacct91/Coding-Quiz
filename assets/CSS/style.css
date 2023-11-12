@@ -1,18 +1,23 @@
 :root {
   --color-button: rgb(45, 11, 45);
+  --color-button-hover: blueviolet;
   --color-button-text: white;
+  --color-after-text: grey;
 }
 
+* {
+  font-size: 21px;
+}
 
 header {
-  background-color: bisque;
   width: 100%;
   height: 75px;
   padding: 0 20px;
+  margin-bottom: 50px;
 }
 
-main {
-  background-color: rgb(127, 181, 235);
+h1, h2 {
+  font-size: 2rem;
 }
 
 /* Basic class */
@@ -32,8 +37,29 @@ main {
 .align-center {
   align-items: center;
 }
+.align-start {
+  align-items: flex-start;
+}
+.alignSelf-end {
+  align-self: flex-end;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
 
 /* Class Selector */
+#startingCard {
+  /* border: 2px solid black; */
+  width: 60%;
+}
+
+#startingCard p {
+  margin: 20px 0;
+}
+
 .answer-list {
   background-color: darksalmon;
   min-height: 300px;
@@ -48,6 +74,24 @@ main {
   color: var(--color-button-text);
   min-width: 200px;
   min-height: 50px;
-  border-radius: 10px;
+  border-radius: 7px;
   border-style: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-button-hover);
+}
+
+#questionCard {
+  border: 2px solid;
+  width: 70%;
+  margin: 0 23% 0 30%;
+}
+
+#questionCard::after {
+  content: "Wrong!";
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--color-after-text);
 }
