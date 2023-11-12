@@ -83,6 +83,10 @@ h1, h2 {
   background-color: var(--color-button-hover);
 }
 
+.ans {
+  padding-left: 10px;
+}
+
 #questionCard {
   border: 2px solid;
   width: 70%;
