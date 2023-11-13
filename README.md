@@ -33,7 +33,7 @@ Displying the scores from higest to lowest.
 ## Features
 
     Responsive Site design.
-    keep track of your scores
+    keep track of your scores over multiple sessions.
 
 
 ## Credits
