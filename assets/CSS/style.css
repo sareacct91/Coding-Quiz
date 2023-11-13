@@ -1,8 +1,8 @@
 :root {
   --color-button: rgb(45, 11, 45);
-  --color-button-hover: blueviolet;
+  --color-button-hover: rgb(169, 55, 192);
   --color-button-text: white;
-  --color-after-text: grey;
+  --color-after-text: rgb(158, 157, 157);
 }
 
 * {
@@ -18,6 +18,7 @@ header {
 
 h1, h2 {
   font-size: 2rem;
+  cursor: default;
 }
 
 /* Basic class */
@@ -98,6 +99,13 @@ h1, h2 {
   background-color: var(--color-button-hover);
 }
 
+#highScoreBtn {
+  color: var(--color-button-hover);
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
 #initialTxt {
   min-height: 35px;
 }
@@ -119,6 +127,7 @@ footer {
   width: 70%;
   margin: 30px 23% 0 30%;
   padding-left: 5px;
+  padding-top: 30px;
   font-size: 1.8rem;
   font-style: italic;
   text-align: left;
