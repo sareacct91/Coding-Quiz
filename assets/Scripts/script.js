@@ -39,7 +39,7 @@ function starTimer() {
     timeDisplay.innerHTML = `Time: ${timer.second}`;
     
     // If time runs out, stop the quiz
-    if (timer.second === 0) {
+    if (timer.second <= 0) {
       checkAnswer(null, true);
     }
   }, 1000);
