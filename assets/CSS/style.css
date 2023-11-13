@@ -1,10 +1,11 @@
 :root {
   --color-bg-html: rgb(18, 34, 63);
-  --color-bg-body: rgba(31, 31, 31, 0.932);
+  --color-bg-body: rgba(41, 41, 41, 0.863);
+  --color-after-text: rgb(158, 157, 157);
   --color-button: rgb(45, 11, 45);
   --color-button-hover: rgb(169, 55, 192);
   --color-button-text: white;
-  --color-after-text: rgb(158, 157, 157);
+  --color-text-input: black;
 }
 
 * {
@@ -109,6 +110,7 @@ h1, h2 {
 }
 
 #initialTxt {
+  color: var(--color-text-input);
   min-height: 35px;
 }
 #submitBtn {
