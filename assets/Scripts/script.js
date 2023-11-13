@@ -167,7 +167,9 @@ document.querySelector("#restartBtn").addEventListener("click", () => {
   highScoresCard.classList.contains("isNotDisplay") || highScoresCard.classList.add("isNotDisplay");
   !startingCard.classList.contains("isNotDisplay") || startingCard.classList.remove("isNotDisplay");
 
+  // reset variables to default and stop timer
   index = 0;
+  clearInterval(timer.intervalId);
   timer.second = totalTime;
   timeDisplay.innerHTML = `Time: 0`;
 });
