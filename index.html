@@ -9,55 +9,57 @@
 </head>
 
 <body class="column">
-  <header class="row just-between align-center">
-    <button id="highScoreBtn">View high scores</button>
-    <p id="timeDisplay" class="">Time: 0</p>
-  </header>
+  <div class="bg-image"></div>
+  <div class="wrapper column">
+    <header class="row just-between align-center">
+      <button id="highScoreBtn">View high scores</button>
+      <p id="timeDisplay" class="">Time: 0</p>
+    </header>
 
-  <main class="column align-center text-center">
-    
-    <div id="startingCard" class="column align-center ">
-      <h1>Coding Quiz Challenge</h1>
+    <main class="column align-center text-center">
+      
+      <div id="startingCard" class="column align-center ">
+        <h1>Coding Quiz Challenge</h1>
 
-      <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by total percentage!</p>
+        <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by total percentage!</p>
 
-      <button id="startBtn" class="button ">Start Quiz</button>
-    </div>
-    
-    <div id="questionCard" class="column align-start isNotDisplay">
-      <h2 id="questionDisplay" class="text-left"></h2>
-
-      <ul class="answer-list column just-even">
-        <button id="answerBtn1" class="button ans row align-center">1. </button>
-        <button id="answerBtn2" class="button ans row align-center">2. </button>
-        <button id="answerBtn3" class="button ans row align-center">3. </button>
-        <button id="answerBtn4" class="button ans row align-center">4. </button>
-      </ul>
-    </div>
-
-    <div id="resultCard" class="column align-start isNotDisplay">
-      <h2>All done!</h2>
-      <p id="finalScore">Your final score is "".</p>
-      <div>
-        <label for="initialTxt">Enter initials: </label>
-        <input type="text" name="initialTxt" id="initialTxt">
-        <button id="submitBtn" class="button">Submit</button>
-      </div>
-    </div>
-
-    <div id="highScoresCard" class="column align-start isNotDisplay">
-      <h2>High scores</h2>
-      <ul id="highScoreDisplay" class="text-left"></ul>
-      <div>
-        <button id="restartBtn" class="button">Go back</button>
-        <button id="clearBtn" class="button">Clear high scores</button>
+        <button id="startBtn" class="button ">Start Quiz</button>
       </div>
       
-    </div>
+      <div id="questionCard" class="column align-start isNotDisplay">
+        <h2 id="questionDisplay" class="text-left"></h2>
 
-    <footer class="column align-start isNotDisplay"></footer>
-  </main>
+        <ul class="answer-list column just-even">
+          <button id="answerBtn1" class="button ans row align-center">1. </button>
+          <button id="answerBtn2" class="button ans row align-center">2. </button>
+          <button id="answerBtn3" class="button ans row align-center">3. </button>
+          <button id="answerBtn4" class="button ans row align-center">4. </button>
+        </ul>
+      </div>
 
+      <div id="resultCard" class="column align-start isNotDisplay">
+        <h2>All done!</h2>
+        <p id="finalScore">Your final score is "".</p>
+        <div>
+          <label for="initialTxt">Enter initials: </label>
+          <input type="text" name="initialTxt" id="initialTxt">
+          <button id="submitBtn" class="button">Submit</button>
+        </div>
+      </div>
+
+      <div id="highScoresCard" class="column align-start isNotDisplay">
+        <h2>High scores</h2>
+        <ul id="highScoreDisplay" class="text-left"></ul>
+        <div>
+          <button id="restartBtn" class="button">Go back</button>
+          <button id="clearBtn" class="button">Clear high scores</button>
+        </div>
+        
+      </div>
+
+      <footer class="column align-start isNotDisplay"></footer>
+    </main>
+  </div>  
   
 
   <script src="./assets/Scripts/script.js"></script>
