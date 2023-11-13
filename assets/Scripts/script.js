@@ -176,6 +176,7 @@ document.querySelector("#restartBtn").addEventListener("click", () => {
   // reset variables to default and stop timer
   index = 0;
   stopTimer();
+  timeDisplay.style.color = "";
   timer.second = totalTime;
   timeDisplay.innerHTML = `Time: 0`;
 });
