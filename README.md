@@ -10,7 +10,7 @@ Click [here](https://sareacct91.github.io/Coding-Quiz/) to access the deployed a
 ## Usage
 
 
-  ![alt text](assets/images/Screen-shot/01.png)
+  ![alt text](assets/Images/Screen-shot/01.png)
 
 
 ## Features
