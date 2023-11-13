@@ -149,6 +149,7 @@ document.querySelector("#highScoreBtn").addEventListener("click", () => {
   questionCard.classList.contains("isNotDisplay") || questionCard.classList.add("isNotDisplay")
   highScoresCard.classList.remove("isNotDisplay");
   // 
+  clearInterval(timer.intervalId);
   renderScores();
 });
 
