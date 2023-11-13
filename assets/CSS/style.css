@@ -1,4 +1,6 @@
 :root {
+  --color-bg-html: rgb(42, 56, 56);
+  --color-bg-body: rgb(186, 210, 255);
   --color-button: rgb(45, 11, 45);
   --color-button-hover: rgb(169, 55, 192);
   --color-button-text: white;
@@ -9,11 +11,25 @@
   font-size: 21px;
 }
 
+html {
+  background-color: var(--color-bg-html);
+  margin-top: 5%;
+  height: 50%;
+}
+
 header {
   width: 100%;
   height: 75px;
   padding: 0 20px;
   margin-bottom: 50px;
+}
+
+body {
+  background-color: var(--color-bg-body);
+  border: 2px solid black;
+  margin: 0 auto;
+  width: 95%;
+  height: 50%;
 }
 
 h1, h2 {
@@ -63,23 +79,21 @@ h1, h2 {
 
 #questionCard,
 #resultCard,
-#highScores {
+#highScoresCard {
   /* border: 2px solid; */
   width: 70%;
   margin: 0 23% 0 30%;
 }
 
-#resultCard {
+#resultCard,
+#highScoresCard {
   line-height: 2;
 }
 
 .answer-list {
   /* background-color: darksalmon; */
   min-height: 300px;
-}
-
-.ans {
-  padding-left: 10px;
+  min-width: 200px;
 }
 
 .isNotDisplay {
@@ -89,12 +103,13 @@ h1, h2 {
 .button {
   background-color: var(--color-button);
   color: var(--color-button-text);
-  min-width: 200px;
   min-height: 50px;
   border-radius: 7px;
   border-style: none;
   cursor: pointer;
+  padding: 10px 15px;
 }
+
 .button:hover {
   background-color: var(--color-button-hover);
 }
@@ -118,9 +133,9 @@ h1, h2 {
 #highScoreDisplay {
   background-color: rgb(205, 183, 241);
   padding-left: 2%;
+  margin-bottom: 2%;
   width: 100%;
 }
-
 
 footer {
   border-top: 2px solid;
