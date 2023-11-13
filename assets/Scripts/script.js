@@ -55,6 +55,15 @@ function renderQuestion() {
   answerBtn4.innerHTML = questionList[index].ans4;
 }
 
+function renderFooter(isBool) {
+  document.querySelector("footer").classList.remove("isNotDisplay");
+  document.querySelector("footer").innerHTML = isBool ? `Correct!` : `Wrong!`;
+  
+  setTimeout(() => {
+    document.querySelector("footer").classList.add("isNotDisplay")
+  }, 2000);
+}
+
 // Check user answer and render the next question or show result
 function checkAnswer(answerStr, isTime = false) {
   // Subtract time if answer wrong and time didn't runs out
@@ -62,7 +71,11 @@ function checkAnswer(answerStr, isTime = false) {
     timer.second -= (1 / questionList.length) * totalTime;
     document.querySelector("#timeDisplay")
       .innerHTML = `Time: ${timer.second}`;
+    renderFooter(false);
+  } else {
+    renderFooter(true);
   }
+
   // show footer
   if (++index < questionList.length && !isTime) {
     renderQuestion();
@@ -149,10 +162,10 @@ document.querySelector("#clearBtn").addEventListener("click", () => {
 // restart(go back) button
 document.querySelector("#restartBtn").addEventListener("click", () => {
   // Hide other card and show only the starting card
-  resultCard.classList.contains("isNotDisplay") || resultCard.classList.add("isNotDisplay")
-  questionCard.classList.contains("isNotDisplay") || questionCard.classList.add("isNotDisplay")
+  resultCard.classList.contains("isNotDisplay") || resultCard.classList.add("isNotDisplay");
+  questionCard.classList.contains("isNotDisplay") || questionCard.classList.add("isNotDisplay");
   highScoresCard.classList.contains("isNotDisplay") || highScoresCard.classList.add("isNotDisplay");
-  !startingCard.classList.contains("isNotDisplay") || startingCard.classList.remove("isNotDisplay")
+  !startingCard.classList.contains("isNotDisplay") || startingCard.classList.remove("isNotDisplay");
 
   index = 0;
   timer.second = totalTime;
