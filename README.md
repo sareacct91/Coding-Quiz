@@ -9,8 +9,25 @@ Click [here](https://sareacct91.github.io/Coding-Quiz/) to access the deployed a
 
 ## Usage
 
+Starting/Landing page of the application.
 
   ![alt text](assets/Images/Screen-shot/01.png)
+
+
+The quiz begins after you click the Start Quiz button.
+you have 10 mins to answer all the questions. If you picked the wrong answer, a percentage of the total time will be subtracted from the remaining time.
+
+  ![alt text](assets/Images/Screen-shot/02.png)
+
+
+When you finish the quiz or the time ran out. You'll see your score and a textbox to input your name/initial to submit to the score list.
+
+  ![alt text](assets/Images/Screen-shot/03.png)
+
+
+Displying the scores from higest to lowest.
+
+  ![alt text](assets/Images/Screen-shot/04.png)
 
 
 ## Features
