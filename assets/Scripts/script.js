@@ -45,6 +45,11 @@ function starTimer() {
   }, 1000);
 }
 
+function stopTimer() {
+  clearInterval(timer.intervalId);
+  timeDisplay.style.color = "red";
+}
+
 // Render the current question on screen
 function renderQuestion() {
   document.querySelector("#questionDisplay")
@@ -81,7 +86,7 @@ function checkAnswer(answerStr, isTime = false) {
     renderQuestion();
   } else {
     // Stop the timer
-    clearInterval(timer.intervalId);
+    stopTimer();
     // Go to the result card
     questionCard.classList.add("isNotDisplay");
     resultCard.classList.remove("isNotDisplay");
@@ -149,7 +154,7 @@ document.querySelector("#highScoreBtn").addEventListener("click", () => {
   questionCard.classList.contains("isNotDisplay") || questionCard.classList.add("isNotDisplay")
   highScoresCard.classList.remove("isNotDisplay");
   // 
-  clearInterval(timer.intervalId);
+  stopTimer();
   renderScores();
 });
 
@@ -170,7 +175,7 @@ document.querySelector("#restartBtn").addEventListener("click", () => {
 
   // reset variables to default and stop timer
   index = 0;
-  clearInterval(timer.intervalId);
+  stopTimer();
   timer.second = totalTime;
   timeDisplay.innerHTML = `Time: 0`;
 });
