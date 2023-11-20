@@ -31,12 +31,12 @@ startQuiz();
 // Function to start the timer when start button was clicked
 function starTimer() {
   // Display total time to the user
-  timeDisplay.innerHTML = `Time: ${timer.second}`;
+  timeDisplay.textContent = `Time: ${timer.second}`;
   
   // Count down every second (1000ms)
   timer.intervalId = setInterval(() => {
     timer.second--;
-    timeDisplay.innerHTML = `Time: ${timer.second}`;
+    timeDisplay.textContent = `Time: ${timer.second}`;
     
     // If time runs out, stop the quiz
     if (timer.second <= 0) {
@@ -53,16 +53,16 @@ function stopTimer() {
 // Render the current question on screen
 function renderQuestion() {
   document.querySelector("#questionDisplay")
-    .innerHTML = questionList[index].question;
-  answerBtn1.innerHTML = questionList[index].ans1;
-  answerBtn2.innerHTML = questionList[index].ans2;
-  answerBtn3.innerHTML = questionList[index].ans3;
-  answerBtn4.innerHTML = questionList[index].ans4;
+    .textContent = questionList[index].question;
+  answerBtn1.textContent = questionList[index].ans1;
+  answerBtn2.textContent = questionList[index].ans2;
+  answerBtn3.textContent = questionList[index].ans3;
+  answerBtn4.textContent = questionList[index].ans4;
 }
 
 function renderFooter(isBool) {
   document.querySelector("footer").classList.remove("isNotDisplay");
-  document.querySelector("footer").innerHTML = isBool ? `Correct!` : `Wrong!`;
+  document.querySelector("footer").textContent = isBool ? `Correct!` : `Wrong!`;
   
   setTimeout(() => {
     document.querySelector("footer").classList.add("isNotDisplay")
@@ -75,7 +75,7 @@ function checkAnswer(answerStr, isTime = false) {
   if ((answerStr !== questionList[index].correct) && !isTime) {
     timer.second -= (1 / questionList.length) * totalTime;
     document.querySelector("#timeDisplay")
-      .innerHTML = `Time: ${timer.second}`;
+      .textContent = `Time: ${timer.second}`;
     renderFooter(false);
   } else {
     renderFooter(true);
@@ -92,7 +92,7 @@ function checkAnswer(answerStr, isTime = false) {
     resultCard.classList.remove("isNotDisplay");
     // Show the current score
     document.querySelector("#finalScore")
-      .innerHTML = `Your final score is ${timer.second}.`;
+      .textContent = `Your final score is ${timer.second}.`;
   }
 }
 
@@ -178,5 +178,5 @@ document.querySelector("#restartBtn").addEventListener("click", () => {
   stopTimer();
   timeDisplay.style.color = "";
   timer.second = totalTime;
-  timeDisplay.innerHTML = `Time: 0`;
+  timeDisplay.textContent = `Time: 0`;
 });
