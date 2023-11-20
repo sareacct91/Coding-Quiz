@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/CSS/reset.css">
+  <link rel="stylesheet" href="./assets/CSS/style.css">
+  <title>testing</title>
+</head>
+<body>
+  <div class="wrapper column">
+    <header class="row just-between align-center">
+      <button id="highScoreBtn">View high scores</button>
+      <p id="timeDisplay" class="">Time: 0</p>
+    </header>
+    <main id="main" class="column align-center text-center"></main>
+  </div>
+  
+  <script>
+    const mainTag = document.querySelector("#main");
+
+    const h1Tag = document.createElement("h1");
+    const button1Tag = document.createElement("button");
+    const button2Tag = document.createElement("button");
+    const button3Tag = document.createElement("button");
+    const button4Tag = document.createElement("button");
+    const pTag = document.createElement("p");
+    const inputTag = document.createElement("input");
+    const labelTag = document.createElement("label");
+
+    function resetRender() {
+      mainTag.innerHTML = "";
+    }
+
+    function addElements() {
+      questionTag.textContent = `What's up?`;
+
+      mainTag.appendChild(questionTag);
+    }
+
+    function renderQuestion(isFirst = false) {
+      if (isFirst) {
+        mainTag.append(h1Tag, button1Tag, button2Tag, button3Tag, button4Tag);
+      } 
+            
+      h1Tag.textContent = `q1?`;
+      button1Tag.textContent = `a1`;
+      button2Tag.textContent = `a1`;
+      button3Tag.textContent = `a1`;
+      button4Tag.textContent = `a1`;
+
+    }
+
+    function renderQuestion2(isFirst = false) {
+      if (isFirst) {
+        
+      } 
+      mainTag.append(h1Tag, button1Tag, button2Tag, button3Tag, button4Tag);
+            
+      h1Tag.textContent = `q2?`;
+      button1Tag.textContent = `a2`;
+      button2Tag.textContent = `a2`;
+      button3Tag.textContent = `a2`;
+      button4Tag.textContent = `a2`;
+
+    }
+
+  renderQuestion(true);
+  renderQuestion2();
+
+  </script>
+</body>
+</html>
