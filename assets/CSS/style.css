@@ -25,7 +25,7 @@ h1, h2 {
   cursor: default;
 }
 
-/* Basic class */
+/* Utilities Class */
 .row {
   display: flex;
 }
@@ -55,7 +55,34 @@ h1, h2 {
   text-align: left;
 }
 
+.isNotDisplay {
+  display: none;
+}
+
+
 /* Class Selector */
+.wrapper {
+  background-color: var(--color-bg-body);
+  border-radius: 20px;
+  border: 2px solid black;
+  margin: 5% auto;
+  width: min(1000px, 95%);
+  min-height: 50vh;
+  padding-bottom: 3%;
+}
+
+.bg-image {
+  background-image: url(../Images/bg-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-size: contain; */
+  
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
 #startingCard {
   /* border: 2px solid black; */
   width: 60%;
@@ -82,10 +109,6 @@ h1, h2 {
   /* background-color: darksalmon; */
   min-height: 300px;
   min-width: 200px;
-}
-
-.isNotDisplay {
-  display: none;
 }
 
 .button {
@@ -126,28 +149,6 @@ h1, h2 {
   width: 100%;
 }
 
-.bg-image {
-background-image: url(../Images/bg-image.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-/* background-size: contain; */
-
-position: fixed;
-z-index: -1;
-width: 100%;
-height: 100%;
-}
-
-.wrapper {
-  background-color: var(--color-bg-body);
-  border-radius: 20px;
-  border: 2px solid black;
-  margin: 5% auto;
-  width: 95%;
-  min-height: 50vh;
-  padding-bottom: 3%;
-}
-
 footer {
   border-top: 2px solid;
   width: 70%;
@@ -168,6 +169,13 @@ footer {
     font-size: 1.5rem;
   }
 
+  #startingCard, 
+  #questionCard,
+  #resultCard,
+  #highScoresCard {
+    align-items: center;
+  }
+
   #resultCard div {
     display: flex;
     flex-direction: column;
@@ -175,17 +183,7 @@ footer {
 }
 
 @media screen and (max-width: 700px){
-  * {
-    font-size: 22px;
-  }
   h1, h2 {
     font-size: 1.2rem;
-  }
-  
-  #startingCard, 
-  #questionCard,
-  #resultCard,
-  #highScoresCard {
-    align-items: center;
   }
 }
