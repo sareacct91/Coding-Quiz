@@ -141,8 +141,10 @@ submitBtn.addEventListener("click", () => {
     initial: document.querySelector("#initialTxt").value.toUpperCase(),
     score: timer.second,
   };
+  //Clear the input field 
+  document.querySelector("#initialTxt").value = "";
 
-  // add current score to the array of scores and sort
+  // add current score to the array of scores and sort from high score to low
   scoresArr.push(scoreObj);
   scoresArr.sort((a, b) => b.score - a.score);
 
